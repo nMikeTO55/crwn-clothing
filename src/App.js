@@ -1,18 +1,12 @@
-import "./categories.styles.scss";
 import CategoryItem from './components/category-item/category-item.component.jsx';
 import ProductList  from "./components/data/data.products.jsx";
+import Menu         from "./components/menus/menus.main.jsx";
 
 const  App = ()=> {
 
-  <ProductList />
-
   return (
-    <div className='categories-container'>
-      {ProductList.map((product) => (
-        <CategoryItem key={product.id} category={product}/>
-     ))}
-   </div>
-  );
+    <Menu />
+  )
 }
 
 export default App;
