@@ -1,12 +1,11 @@
-//import CategoryItem from './components/category-item/category-item.component.jsx';
-//import ProductList  from "./components/data/data.products.jsx";
-//import Menu         from "./components/menus/menus.main.jsx";
 import Home from './routes/home/home.component.jsx';
+import {Routes, Route} from 'react-router-dom';
 
 const  App = ()=> {
-
   return (
-    <Home />
+    <Routes>
+      <Route path='/' element={<Home />} />
+    </Routes>
   )
 }
 
