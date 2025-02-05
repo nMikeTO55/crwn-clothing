@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import { createAuthUserWithEmailAndPassword, createUserAuth } from '../../utils/firebase/firebase.utils.js';
+import FormInput  from '../../components/form-input/form-input.component.jsx';
 
 const defaultFormFields = {
   displayName: '',
@@ -50,22 +51,41 @@ const SignUpForm = ()=> {
     <div>
       <h1>Sign up with your Email and Password</h1>
       <form onSubmit={handleSubmit}>
-        
-        <label>Display Name</label>
-        <input type='text' required onChange={handleChange} 
-                           name="displayName" value={displayName}/><br />
+        <FormInput 
+          label="Display Name"
+          type='text' 
+          required 
+          onChange={handleChange} 
+          name="displayName" 
+          value={displayName}
+        />
 
-        <label>Email</label>
-        <input type='email'required onChange={handleChange} 
-                           name="email" value={email}/><br />
+        <FormInput 
+          label="Email"
+          type='text' 
+          required 
+          onChange={handleChange} 
+          name="email" 
+          value={email}
+        />
 
-        <label>Password</label>
-        <input type='password' required onChange={handleChange} 
-                               name="password" value={password}/><br />
+        <FormInput 
+          label="Password"
+          type='password' 
+          required 
+          onChange={handleChange} 
+          name="password" 
+          value={password}
+        />
 
-        <label>Confirm Password</label>
-        <input type='password' required onChange={handleChange} 
-                               name="confirmPassword" value={confirmPassword}/><br />
+        <FormInput 
+          label="Confirm Password"
+          type='password' 
+          required 
+          onChange={handleChange} 
+          name="confirmPassword" 
+          value={confirmPassword}
+        />
 
         <button type='submit'>Submit</button>
       </form>
