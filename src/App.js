@@ -1,22 +1,22 @@
-import {Routes, Route} from 'react-router-dom';
-import Navigation      from './routes/navigation/navigation.component.jsx';
-import Home            from './routes/home/home.component.jsx';
-import SignIn          from './routes/sign-in/sign-in.component.jsx'
+import { Routes, Route } from "react-router-dom";
+import Navigation from "./routes/navigation/navigation.component.jsx";
+import Home from "./routes/home/home.component.jsx";
+import Authentication from "./routes/authentication/authentication.component.jsx";
 
-const Shop = ()=>{
+const Shop = () => {
   return <h1>Shop.</h1>;
-}
+};
 
-const  App = ()=> {
+const App = () => {
   return (
     <Routes>
-      <Route path='/' element={<Navigation />}>
+      <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
-        <Route path='/shop' element={<Shop/>}/>
-        <Route path='/sign-in' element={<SignIn/>}/>
-      </Route>      
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/auth" element={<Authentication />} />
+      </Route>
     </Routes>
-  )
-}
+  );
+};
 
 export default App;
