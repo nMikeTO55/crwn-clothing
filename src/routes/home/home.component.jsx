@@ -1,15 +1,14 @@
-import './home.styles.scss';
-import ProductList  from "../../components/data/data.products.jsx";
-import CategoryItem from '../../components/category-item/category-item.component.jsx'
+import { Outlet } from 'react-router-dom';
 
-const Home = ()=> {
+import Directory from '../../components/directory/directory.component';
+
+const Home = () => {
   return (
-    <div className='categories-container'>
-    {ProductList.map((category) => (
-        <CategoryItem key={category.id} category={category}/>
-      ))}
+    <div>
+      <Directory />
+      <Outlet />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
